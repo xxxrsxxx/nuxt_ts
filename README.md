@@ -1,0 +1,2 @@
+# nuxt_ts
+Practice
