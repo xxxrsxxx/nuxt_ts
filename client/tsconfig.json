@@ -27,7 +27,12 @@
       "@types/node",
       "@nuxt/types"
     ],
-    "typeRoots": ["./node_modules/@types", "./types"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types",
+      "vue/types",
+      "@nuxt/vue-app"
+    ],
     "jsx": "preserve",
     "jsxFactory": "h"
   },

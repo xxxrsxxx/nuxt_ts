@@ -35,6 +35,8 @@ export default {
     '@nuxt/typescript-build'
   ],
 
+  middleware : ['auth'],
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
