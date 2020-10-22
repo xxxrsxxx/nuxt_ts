@@ -1,7 +1,7 @@
+///<reference path="./types/jsx.d.ts" />
 import { Vue } from "nuxt-property-decorator";
 import { Context } from '@nuxt/types';
 import { NuxtAxiosInstance } from '@nuxtjs/axios';
-
 declare module '*.tsx' {
   export default Vue
 }

@@ -1,11 +1,15 @@
 import { CreateElement, VNode } from 'vue'
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue, Prop } from "nuxt-property-decorator";
 
+//components
 import ListItem from "@/components/listItem";
 
+// util
+import { map } from "@/utils/lodash";
 
 @Component
 export default class MainPage extends Vue {
+
 
   async asyncData({ app, store }: nuxtContext): Promise<any>{
     console.log("-------page init -------");
@@ -18,28 +22,23 @@ export default class MainPage extends Vue {
     console.log("async data res", res);
   }
 
-  async fetch({ query, store }: nuxtContext) {
+  async fetch({ query, store }: nuxtContext){
     console.log("nuxt cycle fetch");
   }
 
   private listLength: number[] = [1, 2, 3, 4, 5];
   private booleanValue: boolean = false;
   private _string: string = 'string';
+  private _number: number | undefined;
 
-  data(){
-    return {
-      _number: 0
-    }
-  }
-
-  fragment(index){
+  fragment(index: number){
     return (
       <p>fragment {this._number} / {index} </p>
     )
   }
 
   fragmentCondition(type: number){
-    let { _data } = this;
+    let { _data }: any = this;
     switch (type) {
       case 1 :
         return <p>type1 {_data._string}</p>
@@ -51,7 +50,7 @@ export default class MainPage extends Vue {
   }
 
   clickHandler(){
-    console.log("click======");
+    console.log("========click======");
     this.booleanValue = !this.booleanValue;
   }
 
