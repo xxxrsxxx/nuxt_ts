@@ -4,6 +4,7 @@ import find from 'lodash/find'
 import map from 'lodash/map'
 import keyBy from 'lodash/keyBy'
 import filter from 'lodash/filter'
+import chunk from 'lodash/chunk'
 
 export {
   get,
@@ -11,5 +12,6 @@ export {
   find,
   map,
   keyBy,
-  filter
+  filter,
+  chunk
 }
